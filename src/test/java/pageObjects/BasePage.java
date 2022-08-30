@@ -56,7 +56,7 @@ public class BasePage {
 			}
 		}
 		
-		//Alart
+		//Alert
 		public void alertOK(String text) {
 			driver.switchTo().alert().sendKeys(text);
 			sleep(1000);
