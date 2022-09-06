@@ -27,7 +27,6 @@ public class BasePage {
 		public void fillText(WebElement el, String text) {
 			//highlight
 			highlightElement(el, "black", "pink");
-			//js.executeScript("arguments[0].setAttribute('style', 'background-color:pink;' , 'border: 1px solid black;');", el);
 			el.clear();
 			sleep(500);
 			el.sendKeys(text);
@@ -35,14 +34,12 @@ public class BasePage {
 
 		public void click(WebElement el) {
 			highlightElement(el, "yellow", "blue");
-			//js.executeScript("arguments[0].setAttribute('style', 'background-color:blue; border: 1px solid black;');", el);
 			sleep(400);
 			el.click();
 		}
 
 		public String getText(WebElement el) {
 			highlightElement(el, "yellow", "yellow");
-			//js.executeScript("arguments[0].setAttribute('style', 'background-color:yellow;');", el);
 			sleep(500);
 			return el.getText();
 		}
