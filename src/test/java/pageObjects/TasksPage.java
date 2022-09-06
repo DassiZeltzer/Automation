@@ -1,57 +1,17 @@
 package pageObjects;
 
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-
-
 public class TasksPage extends MenuPage{
-	@FindBy(css="#task")
-	private WebElement taskField;
-	@FindBy(css="#newtask_submit")
-	private WebElement addButton;
-	@FindBy(css="#newtask_adv>span")
-	private WebElement advancedButton;	
-	@FindBy(css="#search")
-	private WebElement searcField;
-	@FindBy(css=".tab-height-wrapper>span")
-	private WebElement newListButton;
+	//Tasks
 	@FindBy(css="#total")
 	private WebElement total;
-	@FindBy(css="#lists li span")
-	private List<WebElement> lists;
 	@FindBy(css=".task-title")
 	private List<WebElement> tasks;
-	@FindBy(css=".taskactionbtn")
-	private List<WebElement> taskMenu;
-	@FindBy(css="#cmenu_delete")
-	private WebElement menuDelete;
-	@FindBy(css="#btnRenameList")
-	private WebElement renameList;
-	@FindBy(css="#btnDeleteList")
-	private WebElement deleteList;
-	@FindBy(css=".list-action")
-	private List<WebElement> listMenu;
-	@FindBy(css="#tagcloudbtn")
-	private WebElement tagsButton;
-	@FindBy(css="#tasklist [class='tag']")
-	private List<WebElement> tags;
-	@FindBy(css="#tabs_buttons")
-	private WebElement selectListButton;
-	@FindBy(css="#slmenucontainer a")
-	private List<WebElement> hamburgerMenu;
-	@FindBy(css=".mtt-tab.mtt-tabs-selected span")
-	private WebElement selectedList;
-	@FindBy(css="#settings")
-	private WebElement settingsButton;
-	@FindBy(css="#cmenu_note")
-	private WebElement editNote;
-	@FindBy(css="[style=\"display: block;\"] .mtt-action-note-save")
-	private WebElement save;
 	@FindBy(css=".task-note-area textarea")
 	private List<WebElement> taskstextarea;
 	@FindBy(css=".task-note span")
@@ -60,6 +20,62 @@ public class TasksPage extends MenuPage{
 	private List<WebElement> checkbox;
 	@FindBy(css="#btnClearCompleted")
 	private WebElement clearCompletedTasks;
+	
+	//Simple task
+	@FindBy(css="#task")
+	private WebElement taskField;
+	@FindBy(css="#newtask_submit")
+	private WebElement addButton;
+	
+	//Advanced task
+	@FindBy(css="#newtask_adv>span")
+	private WebElement advancedButton;
+	@FindBy(css="#cmenu_note")
+	private WebElement editNote;
+	@FindBy(css="[style=\"display: block;\"] .mtt-action-note-save")
+	private WebElement save;
+	
+	//Search
+	@FindBy(css="#search")
+	private WebElement searcField;
+	
+	//Lists
+	@FindBy(css="#lists li span")
+	private List<WebElement> lists;
+	@FindBy(css=".tab-height-wrapper>span")
+	private WebElement newListButton;
+	@FindBy(css="#tabs_buttons")
+	private WebElement selectListButton;
+	@FindBy(css=".mtt-tab.mtt-tabs-selected span")
+	private WebElement selectedList;
+	
+	//List menu
+	@FindBy(css=".list-action")
+	private List<WebElement> listMenu;
+	@FindBy(css="#btnRenameList")
+	private WebElement renameList;
+	@FindBy(css="#btnDeleteList")
+	private WebElement deleteList;
+	
+	//Task menu
+	@FindBy(css=".taskactionbtn")
+	private List<WebElement> taskMenu;
+	@FindBy(css="#cmenu_delete")
+	private WebElement menuDelete;
+	
+	//Tags
+	@FindBy(css="#tagcloudbtn")
+	private WebElement tagsButton;
+	@FindBy(css="#tasklist [class='tag']")
+	private List<WebElement> tags;
+	
+        //Hamburger menu
+	@FindBy(css="#slmenucontainer a")
+	private List<WebElement> hamburgerMenu;
+	
+	//Settings
+	@FindBy(css="#settings")
+	private WebElement settingsButton;
 	
 	public TasksPage(WebDriver driver) {
 		super(driver);
