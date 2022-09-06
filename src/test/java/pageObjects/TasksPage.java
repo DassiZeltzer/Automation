@@ -56,24 +56,14 @@ public class TasksPage extends MenuPage{
 	private List<WebElement> taskstextarea;
 	@FindBy(css=".task-note span")
 	private List<WebElement> tasksNotes;
-	
-	
 	@FindBy(css="[type='checkbox']")
 	private List<WebElement> checkbox;
-	
-	
-	
 	@FindBy(css="#btnClearCompleted")
 	private WebElement clearCompletedTasks;
-	
-	
-	
-	
 	
 	public TasksPage(WebDriver driver) {
 		super(driver);
 	}
-	
 	
 	public void addTask(String taskName){
 		fillText(taskField, taskName);
@@ -81,7 +71,6 @@ public class TasksPage extends MenuPage{
 		waitingForLoading();
 		
 	}
-	
 	
 	public void deleteTask(String taskName){
 		for (int i = 0; i < tasks.size(); i++) {
@@ -95,7 +84,6 @@ public class TasksPage extends MenuPage{
 		}
 	}
 	
-	
 	public void completeTask(String taskName){
 		for (int i = 0; i < tasks.size(); i++) {
 			if (getText(tasks.get(i)).equalsIgnoreCase(taskName)) {
@@ -105,8 +93,6 @@ public class TasksPage extends MenuPage{
 			}
 		}
 	}
-	
-
 	
 	public void editNoteToTask(String taskName, String note){
 		for (int i = 0; i < tasks.size(); i++) {
@@ -127,12 +113,9 @@ public class TasksPage extends MenuPage{
 				}		
 	}
 
-	
-	
 	public void openAdvancedTask() {
 		click(advancedButton);
 	}
-	
 	
 	public void Search(String text) {
 		fillText(searcField, text);
@@ -171,15 +154,6 @@ public class TasksPage extends MenuPage{
 		click(list);
 		sleep(500);
 	}
-	//public void chooseList(String listName) {
-	//	for (WebElement el : lists) {
-	//		if (getText(el).equalsIgnoreCase(listName)) {
-	//			click(el);
-	//			sleep(500);
-	//			break;
-	//		}
-	//	}
-	//}
 	
 	public void selectList(String listName) {
 		click(selectListButton);
@@ -190,8 +164,6 @@ public class TasksPage extends MenuPage{
 			}
 		}
 	}
-
-	
 	
 	public void renameList(String listName, String newListName) {
 		WebElement listMenu = driver.findElement(By.cssSelector("[title='" + listName +"']>.list-action"));
@@ -200,8 +172,6 @@ public class TasksPage extends MenuPage{
 		alertOK(newListName);
 		sleep(1000);
 	}
-
-	
 	
 	public void renameList(String newListName) {
 		for (WebElement el : listMenu) {
@@ -216,8 +186,6 @@ public class TasksPage extends MenuPage{
 		sleep(1000);
 	}
 	
-	
-	
 	public void filterByTag(String tagName) {
 		click(tagsButton);
 		waitingForLoading();
@@ -226,17 +194,12 @@ public class TasksPage extends MenuPage{
 		sleep(1000);
 	}
 	
-	
-	
 	//Validation
 	public int getNumOfTasks() {
 		String sTotal = getText(total);
 		int iTotal = Integer.parseInt(sTotal);
 		return iTotal;	
 	}
-	
-
-	
 	
 	public String getListText() {
 		String ListText = getText(selectedList);
@@ -248,7 +211,6 @@ public class TasksPage extends MenuPage{
 		return SettingsText;	
 	}
 	
-	
 	public boolean isListExist(String listName) {
 		for (WebElement el : lists) {
 			if (el.getText().equalsIgnoreCase(listName)) {
@@ -257,7 +219,6 @@ public class TasksPage extends MenuPage{
 		}
 		return false;
 	}	
-	
 	
 	public boolean isTaskExist(String taskName) {
 		for (WebElement el : tasks) {
@@ -268,7 +229,6 @@ public class TasksPage extends MenuPage{
 		return false;
 	}
 	
-	
 	public boolean isNoteExist(String noteName) {
 		for (WebElement el : tasksNotes) {
 			if (getText(el).equalsIgnoreCase(noteName)) {
@@ -277,7 +237,6 @@ public class TasksPage extends MenuPage{
 		}
 		return false;
 	}
-	
 	
 	public boolean isSearchResultsContain(String taskName) {
 		for (WebElement el : tasks) {
@@ -304,5 +263,4 @@ public class TasksPage extends MenuPage{
 			}
 		return false;
 	}
-	
 }
