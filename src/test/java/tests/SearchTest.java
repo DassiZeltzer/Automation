@@ -6,16 +6,16 @@ import pageObjects.TasksPage;
 
 public class SearchTest extends BaseTest{
 
-	@Test (description="Search exising product")
-	public void tc01_searchExisingProduct() {	
+	@Test (description="Search exising task")
+	public void tc01_searchExisingTask() {	
 		TasksPage tp = new TasksPage(driver);
 		tp.Search("First task");
 		//Validation
 		Assert.assertTrue(tp.isSearchResultsContain("First task"));
 	}
 	
-	@Test (description="Search missing product")
-	public void tc02_searchMissingProduct() {
+	@Test (description="Search missing task")
+	public void tc02_searchMissingTask() {
 		TasksPage tp = new TasksPage(driver);
 		tp.Search("not exist");
 		//Validation
