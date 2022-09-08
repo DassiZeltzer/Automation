@@ -50,5 +50,4 @@ public class AddAdvancedTaskTest extends BaseTest{
 		};
 		return myData;
 	}
-
 }
