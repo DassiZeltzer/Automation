@@ -15,7 +15,7 @@ public class AddSimpleTaskTest extends BaseTest{
 		Checking if the task does exist */
 		Assert.assertTrue(tp.isTaskExist("First task added"));
 	}
-    
+	
  	@Test (dataProvider="getData", description="Add 3 new simple task")
 	public void tc02_addNewSimpleTasks(String taskName) {
 		TasksPage tp = new TasksPage(driver);
