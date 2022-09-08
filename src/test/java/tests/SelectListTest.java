@@ -7,7 +7,7 @@ import pageObjects.TasksPage;
 
 public class SelectListTest extends BaseTest{
 
-	@Test (dataProvider="getData")
+	@Test (dataProvider="getData", description="Add a new list")
 	public void tc01_addNewLists(String list) {
 		TasksPage tp = new TasksPage(driver);
 		tp.addList(list);
@@ -15,7 +15,7 @@ public class SelectListTest extends BaseTest{
 		Assert.assertTrue(tp.isListExist(list));
 	}
 
-	 @Test (dataProvider="getData")
+	 @Test (dataProvider="getData", description="Select list")
 	 public void tc02_selectLists(String list) {
 		TasksPage tp = new TasksPage(driver);
 		tp.selectList(list);
