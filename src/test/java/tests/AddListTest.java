@@ -6,7 +6,7 @@ import pageObjects.TasksPage;
 
 public class AddListTest extends BaseTest{
 
-	@Test
+	@Test (description="Add new list")
 	public void tc01_addNewList() {
 		TasksPage tp = new TasksPage(driver);
 		tp.addList("New list 5");
@@ -14,7 +14,7 @@ public class AddListTest extends BaseTest{
 		Assert.assertTrue(tp.isListExist("New list 5"));
 	}
 		
-	@Test
+	@Test (description="Add new simple task")
 	public void tc02_addNewTasks() {
 		TasksPage tp = new TasksPage(driver);
 		tp.clickOnList("New list 5");
@@ -27,5 +27,4 @@ public class AddListTest extends BaseTest{
 		
 		tp.deleteList("New list 5");
 	}
-	
 }
