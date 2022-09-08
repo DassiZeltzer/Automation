@@ -24,7 +24,6 @@ public class AddListTest extends BaseTest{
 		int actual = tp.getNumOfTasks();
 		int expected = 2;
 		Assert.assertEquals(actual, expected);
-	
 		tp.deleteList("New list 5");
 	}
 }
