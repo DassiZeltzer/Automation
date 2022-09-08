@@ -8,7 +8,7 @@ import pageObjects.TasksPage;
 public class FilterTest extends BaseTest{
 	
 	@Severity(SeverityLevel.NORMAL)
-	@Test (description="Filter tasks by tag")
+	@Test(description="Filter tasks by tag")
 	public void tc01_filterByTag() {
 		TasksPage tp = new TasksPage(driver);
 		tp.openAdvancedTask();
