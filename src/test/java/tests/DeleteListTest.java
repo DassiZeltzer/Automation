@@ -7,7 +7,7 @@ import pageObjects.TasksPage;
 public class DeleteListTest extends BaseTest{
 	
 	@Severity(SeverityLevel.NORMAL)
-	@Test (description="Delete an existing list")
+	@Test(description="Delete an existing list")
 	public void tc01_deleteNewList() {
 		TasksPage tp = new TasksPage(driver);
 		tp.addList("Example list");
