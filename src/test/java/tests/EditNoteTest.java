@@ -7,7 +7,7 @@ import pageObjects.TasksPage;
 public class EditNoteTest extends BaseTest{
 	
 	@Severity(SeverityLevel.NORMAL)
-	@Test (description="Edit note of task")
+	@Test(description="Edit note of task")
 	public void tc01_editNote() {
 		TasksPage tp = new TasksPage(driver);
 		tp.addTask("Task dassi");
