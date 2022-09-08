@@ -17,7 +17,6 @@ public class CompleteTaskTest extends BaseTest{
 		tp.completeTask("task 1 - dassi");
 		tp.clearCompletedTasksInList("Dassi");
 		int after = tp.getNumOfTasks();
-		
 		/* Validation - option 1
 		Checking that the number of tasks has increased by 1 */
 		Assert.assertEquals(before-1, after);
