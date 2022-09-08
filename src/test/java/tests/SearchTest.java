@@ -23,5 +23,4 @@ public class SearchTest extends BaseTest{
 		int expected = 0;
 		Assert.assertEquals(actual, expected);
 	}
-
 }
