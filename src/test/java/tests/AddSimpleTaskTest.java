@@ -8,7 +8,7 @@ import pageObjects.TasksPage;
 public class AddSimpleTaskTest extends BaseTest{
 	
 	@Severity(SeverityLevel.NORMAL)
- 	@Test (description="Add new simple task")
+ 	@Test(description="Add new simple task")
 	public void tc01_addNewSimpleTask() {
 		TasksPage tp = new TasksPage(driver);
 		tp.addTask("First task added");
@@ -18,7 +18,7 @@ public class AddSimpleTaskTest extends BaseTest{
 	}
 	
 	@Severity(SeverityLevel.NORMAL)
- 	@Test (dataProvider="getData", description="Add 3 new simple task")
+ 	@Test(dataProvider="getData", description="Add 3 new simple task")
 	public void tc02_addNewSimpleTasks(String taskName) {
 		TasksPage tp = new TasksPage(driver);
 		tp.addTask(taskName);
