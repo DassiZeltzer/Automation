@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class TasksPage extends MenuPage{
-	//Tasks
+	//Tasks list
 	@FindBy(css="#total")
 	private WebElement total;
 	@FindBy(css=".task-title")
