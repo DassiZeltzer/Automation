@@ -5,7 +5,8 @@ import org.testng.annotations.Test;
 import pageObjects.TasksPage;
 
 public class DeleteListTest extends BaseTest{
-	 @Test
+	
+	 @Test (description="Delete an existing list")
 	 public void tc01_deleteNewList() {
 	 	TasksPage tp = new TasksPage(driver);
 	 	tp.addList("Example list");
