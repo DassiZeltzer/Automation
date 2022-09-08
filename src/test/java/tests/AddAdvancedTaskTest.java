@@ -8,6 +8,7 @@ import pageObjects.TasksPage;
 
 public class AddAdvancedTaskTest extends BaseTest{
 
+	@Severity(SeverityLevel.NORMAL)
 	@Test (description="Add new advanced task")
 	public void tc01_addNewAdvTask() {
 		TasksPage tp = new TasksPage(driver);
@@ -24,6 +25,7 @@ public class AddAdvancedTaskTest extends BaseTest{
 		Assert.assertTrue(tp.isTaskExist("adv task 0"));
 	}
 	
+	@Severity(SeverityLevel.NORMAL)
 	@Test (dataProvider="getData", description="Add 4 new advanced tasks")
 	public void tc02_addNewAdvTasks(String priority, String due, String task, String note, String tags) {
 		TasksPage tp = new TasksPage(driver);
