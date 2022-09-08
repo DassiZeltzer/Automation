@@ -16,11 +16,11 @@ public class AddAdvancedTaskTest extends BaseTest{
 		AdvancedTaskPage atp = new AdvancedTaskPage(driver);
 		atp.addAdvancedTask("2", "22/7/2022", "adv task 0", "note 0", "dassi");
 		int after = tp.getNumOfTasks();
-	/* Validation - option 1
-	Checking that the number of tasks has increased by 1 */
+		/* Validation - option 1
+		Checking that the number of tasks has increased by 1 */
 		Assert.assertEquals(after, before+1);
-	/* validation - option 2
-	Checking if the task does exist */
+		/* validation - option 2
+		Checking if the task does exist */
 		Assert.assertTrue(tp.isTaskExist("adv task 0"));
 	}
 	
@@ -32,11 +32,11 @@ public class AddAdvancedTaskTest extends BaseTest{
 		AdvancedTaskPage atp = new AdvancedTaskPage(driver);
 		atp.addAdvancedTask(priority, due, task, note, tags);
 		int after = tp.getNumOfTasks();
-    	/* Validation - option 1
-    	Checking that the number of tasks has increased by 1 */
+    		/* Validation - option 1
+    		Checking that the number of tasks has increased by 1 */
 		Assert.assertEquals(after, before+1);
-	/* validation - option 2 
-	Checking if the task does exist */
+		/* validation - option 2 
+		Checking if the task does exist */
 		Assert.assertTrue(tp.isTaskExist(task));
 	}
 	
