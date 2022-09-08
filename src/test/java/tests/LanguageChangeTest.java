@@ -7,6 +7,7 @@ import pageObjects.TasksPage;
 
 public class LanguageChangeTest extends BaseTest{
 	
+	@Severity(SeverityLevel.NORMAL)
 	@Test (description="Change the website language to French")
 	public void tc01_FrenchLanguageChange() {
 	 	TasksPage tp = new TasksPage(driver);
@@ -21,6 +22,7 @@ public class LanguageChangeTest extends BaseTest{
 		Assert.assertEquals(actual, expected);
 	 }
 	   
+	@Severity(SeverityLevel.NORMAL)
 	@Test (description="Change the website language to danish")
 	public void tc02_danishLanguageChange() {
 		TasksPage tp = new TasksPage(driver);
