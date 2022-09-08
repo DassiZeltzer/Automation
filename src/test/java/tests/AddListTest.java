@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import pageObjects.TasksPage;
 
 public class AddListTest extends BaseTest{
+	
 	@Test (description="Add new list")
 	public void tc01_addNewList() {
 		TasksPage tp = new TasksPage(driver);
