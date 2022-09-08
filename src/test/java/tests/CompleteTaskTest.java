@@ -2,7 +2,6 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import pageObjects.TasksPage;
 
 public class CompleteTaskTest extends BaseTest{
