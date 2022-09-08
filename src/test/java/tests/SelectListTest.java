@@ -8,7 +8,7 @@ import pageObjects.TasksPage;
 public class SelectListTest extends BaseTest{
 
 	@Severity(SeverityLevel.NORMAL)
-	@Test (dataProvider="getData", description="Add a new list")
+	@Test(dataProvider="getData", description="Add a new list")
 	public void tc01_addNewList(String list) {
 		TasksPage tp = new TasksPage(driver);
 		tp.addList(list);
@@ -17,7 +17,7 @@ public class SelectListTest extends BaseTest{
 	}
 
 	@Severity(SeverityLevel.NORMAL)
-	@Test (dataProvider="getData", description="Select list")
+	@Test(dataProvider="getData", description="Select list")
 	public void tc02_selectList(String list) {
 		TasksPage tp = new TasksPage(driver);
 		tp.selectList(list);
