@@ -1,8 +1,6 @@
 package pageObjects;
 
-
 import java.time.Duration;
-
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -69,22 +67,17 @@ public class BasePage {
 			action.moveToElement(el).build().perform();
 		}
 		
-		
 		private void highlightElement(WebElement element, String color, String background) {
 			//keep the old style to change it back
 			String originalStyle = element.getAttribute("style");
 			String newStyle = "background-color:" + background + "; border: 1px solid " + color + ";" + originalStyle;
 			JavascriptExecutor js = (JavascriptExecutor) driver;
-			
 			// Change the style 
 			js.executeScript("var tmpArguments = arguments;setTimeout(function () {tmpArguments[0].setAttribute('style', '" + newStyle + "');},0);",
 					element);
-
 			// Change the style back after few miliseconds
 			js.executeScript("var tmpArguments = arguments;setTimeout(function () {tmpArguments[0].setAttribute('style', '"
 					+ originalStyle + "');},1000);", element);
 
 		}
 }
-
-
