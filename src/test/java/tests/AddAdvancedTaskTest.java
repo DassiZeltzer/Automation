@@ -9,7 +9,7 @@ import pageObjects.TasksPage;
 public class AddAdvancedTaskTest extends BaseTest{
 
 	@Severity(SeverityLevel.NORMAL)
-	@Test (description="Add new advanced task")
+	@Test(description="Add new advanced task")
 	public void tc01_addNewAdvTask() {
 		TasksPage tp = new TasksPage(driver);
 		int before = tp.getNumOfTasks();
@@ -26,7 +26,7 @@ public class AddAdvancedTaskTest extends BaseTest{
 	}
 	
 	@Severity(SeverityLevel.NORMAL)
-	@Test (dataProvider="getData", description="Add 4 new advanced tasks")
+	@Test(dataProvider="getData", description="Add 4 new advanced tasks")
 	public void tc02_addNewAdvTasks(String priority, String due, String task, String note, String tags) {
 		TasksPage tp = new TasksPage(driver);
 		int before = tp.getNumOfTasks();
