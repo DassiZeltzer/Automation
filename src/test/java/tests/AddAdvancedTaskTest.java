@@ -26,8 +26,6 @@ public class AddAdvancedTaskTest extends BaseTest{
 		Assert.assertTrue(tp.isTaskExist("adv task 0"));
 	}
 	
-	
-	
 	@Test (dataProvider="getData", description="Add 4 new advanced tasks")
 	public void tc02_addNewAdvTasks(String priority, String due, String task, String note, String tags) {
 		TasksPage tp = new TasksPage(driver);
@@ -41,11 +39,10 @@ public class AddAdvancedTaskTest extends BaseTest{
     	Checking that the number of tasks has increased by 1 */
 		Assert.assertEquals(after, before+1);
 		
-	    /* validation - option 2
-		Checking if the task does exist */
+	 /* validation - option 2 
+	 Checking if the task does exist */
 		Assert.assertTrue(tp.isTaskExist(task));
 	}
-	
 	
 	@DataProvider
 	public Object[][] getData(){
