@@ -21,7 +21,6 @@ public class CompleteTaskTest extends BaseTest{
 		/* Validation - option 1
 		Checking that the number of tasks has increased by 1 */
 		Assert.assertEquals(before-1, after);
-		
 		/* validation - option 2
 		Checking if the task does exist */
 		Assert.assertFalse(tp.isTaskExist("task 1 - dassi"));
