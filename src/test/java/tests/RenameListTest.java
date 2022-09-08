@@ -2,11 +2,11 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import pageObjects.TasksPage;
 
 public class RenameListTest extends BaseTest{
-	@Test
+	
+	@Test (description="Rename list")
 	public void tc01_renameList() {
 	 	TasksPage tp = new TasksPage(driver);
 	 	tp.addList("List2");
