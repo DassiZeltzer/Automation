@@ -73,8 +73,7 @@ public class BasePage {
 			String newStyle = "background-color:" + background + "; border: 1px solid " + color + ";" + originalStyle;
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			// Change the style 
-			js.executeScript("var tmpArguments = arguments;setTimeout(function () {tmpArguments[0].setAttribute('style', '" + newStyle + "');},0);",
-					element);
+			js.executeScript("var tmpArguments = arguments;setTimeout(function () {tmpArguments[0].setAttribute('style', '" + newStyle + "');},0);",element);
 			// Change the style back after few miliseconds
 			js.executeScript("var tmpArguments = arguments;setTimeout(function () {tmpArguments[0].setAttribute('style', '"
 					+ originalStyle + "');},1000);", element);
