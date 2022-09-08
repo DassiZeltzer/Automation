@@ -6,7 +6,7 @@ import pageObjects.TasksPage;
 
 public class CompleteTaskTest extends BaseTest{
 	
-	@Test
+	@Test (description="Complete a task")
 	public void tc01_CompleteTask(){
 		TasksPage tp = new TasksPage(driver);
 		tp.addList("Dassi");
