@@ -7,7 +7,7 @@ import pageObjects.TasksPage;
 public class DeleteTaskTest extends BaseTest{
 	
 	@Severity(SeverityLevel.NORMAL)
-	@Test (description="Delete an existing task")
+	@Test(description="Delete an existing task")
 	public void tc01_deleteTask() {
 		TasksPage tp = new TasksPage(driver);
 		tp.addTask("Null 1");
