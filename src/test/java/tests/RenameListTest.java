@@ -7,7 +7,7 @@ import pageObjects.TasksPage;
 public class RenameListTest extends BaseTest{
 	
 	@Severity(SeverityLevel.NORMAL)
-	@Test (description="Rename list")
+	@Test(description="Rename list")
 	public void tc01_renameList() {
 	 	TasksPage tp = new TasksPage(driver);
 	 	tp.addList("List2");
