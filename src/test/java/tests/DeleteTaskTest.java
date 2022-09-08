@@ -5,7 +5,8 @@ import org.testng.annotations.Test;
 import pageObjects.TasksPage;
 
 public class DeleteTaskTest extends BaseTest{
-	@Test
+	
+	@Test (description="Delete an existing task")
 	public void tc01_deleteTask() {
 		TasksPage tp = new TasksPage(driver);
 		tp.addTask("Null 1");
