@@ -6,6 +6,7 @@ import pageObjects.TasksPage;
 
 public class AddListTest extends BaseTest{
 	
+	@Severity(SeverityLevel.NORMAL)
 	@Test (description="Add new list")
 	public void tc01_addNewList() {
 		TasksPage tp = new TasksPage(driver);
@@ -14,6 +15,7 @@ public class AddListTest extends BaseTest{
 		Assert.assertTrue(tp.isListExist("New list 5"));
 	}
 		
+	@Severity(SeverityLevel.NORMAL)
 	@Test (description="Add new simple task")
 	public void tc02_addNewTasks() {
 		TasksPage tp = new TasksPage(driver);
