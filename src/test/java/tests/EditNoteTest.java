@@ -11,7 +11,6 @@ public class EditNoteTest extends BaseTest{
 		TasksPage tp = new TasksPage(driver);
 		tp.addTask("Task dassi");
 		tp.editNoteToTask("Task dassi", "Note 1");
-	 		
 	 	//Validation
 	 	Assert.assertTrue(tp.isNoteExist("note 1"));
 	}
